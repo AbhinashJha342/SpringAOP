@@ -11,6 +11,8 @@
     http://www.springframework.org/schema/aop   
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">  
   
+<aop:aspectj-autoproxy/>
+  
 <bean name="circle" class="org.abhinash.javabrains.model.Circle">
 	<property name="name" value="Circle name"></property>
 </bean>
@@ -20,5 +22,7 @@
 </bean>
 
 <bean name="shapes" class="org.abhinash.javabrains.Service.ShapeService" autowire="byName"></bean>
+
+<bean name="loggingAspect" class="org.abhinash.javabrains.aspect.LoggingAspect"></bean>
 
 </beans>
